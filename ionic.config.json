@@ -1,0 +1,8 @@
+{
+  "name": "demandas-vitoria-mobile",
+  "app_id": "1d98bd87",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

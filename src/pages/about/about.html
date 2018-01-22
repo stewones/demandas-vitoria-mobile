@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>QUAL É SUA DEMANDA?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="demandasForm">
+    <ion-item>
+      <ion-label floating>Nome:</ion-label>
+      <ion-input [formControl]="demandasForm.controls['nome']" type="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone:</ion-label>
+      <ion-input [formControl]="demandasForm.controls['telefone']" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Endereço:</ion-label>
+      <ion-input [formControl]="demandasForm.controls['endereco']" type="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Bairro:</ion-label>
+      <ion-input [formControl]="demandasForm.controls['bairro']" type="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Demandas:</ion-label>
+      <ion-input [formControl]="demandasForm.controls['demanda']" type="name"></ion-input>
+    </ion-item>
+  </form>
+
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button block color="secondary">
+        ENVIAR
+      </button>
+    </ion-col>
+  </ion-row>
