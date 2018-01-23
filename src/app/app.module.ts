@@ -11,6 +11,11 @@ import { SobrePage } from '../pages/sobre/sobre';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+import { Http, HttpModule } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -37,10 +43,28 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {
       provide: ErrorHandler, 
       useClass: IonicErrorHandler
     }
   ]
 })
-export class AppModule {}
+export class AppModule {
+
+  // constructor(private socialSharing: SocialSharing) {
+  //   // Check if sharing via email is supported
+  //   this.socialSharing.canShareViaEmail().then(() => {
+  //     // Sharing via email is possible
+  //   }).catch(() => {
+  //     // Sharing via email is not possible
+  //   });
+
+  //   // Share via email
+  //   this.socialSharing.shareViaEmail('Body', 'Subject', ['recipient@example.org']).then(() => {
+  //     // Success!
+  //   }).catch(() => {
+  //     // Error!
+  //   });
+  // }
+}

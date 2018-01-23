@@ -21,4 +21,7 @@ export class AboutPage {
       demanda: ['']
     })
   }
+  demandasClick () {
+    console.log('crap');
+  }
 }
